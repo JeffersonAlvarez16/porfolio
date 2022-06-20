@@ -1,17 +1,17 @@
 import Image from 'next/image';
-import { projects } from '@/data/config';
+import { projects, projectses } from '@/data/config';
 
 export default function Projects() {
   return (
     <div className="">
       <div className="overflow-x-hidden w-full">
         <h2 className="landingSectionTitle max-w-max mx-0 text-left relative mb-4 md:w-max ">
-          {projects.title}
+          {projectses.title}
         </h2>
       </div>
-      <p className="text-lg">{projects.desc}</p>
+      <p className="text-lg">{projectses.desc}</p>
       <div className=" mt-8">
-        {projects.projects.map((item, index) => {
+        {projectses.projects.map((item, index) => {
           return (
             <div
               key={index}

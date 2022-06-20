@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { hero } from '@/data/config';
+import { hero, heroes } from '@/data/config';
 import { useTheme } from 'next-themes';
 
 export default function Hero() {
@@ -9,10 +9,10 @@ export default function Hero() {
       <div className="flex flex-row items-center justify-between w-full">
         <div className="w-20 h-20 rounded-full relative overflow-hidden">
           <Image
-            src="/static/profile.png"
+            src="/static/perfil.jpg"
             layout="fill"
-            objectFit="contain"
-            alt="LeBron"
+            objectFit="cover"
+            alt="Jefferson Alvarez"
           />
         </div>
         <Image
@@ -24,8 +24,8 @@ export default function Hero() {
           onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
         />
       </div>
-      <h1 className="mt-5 mb-4">{hero.title}</h1>
-      <p className="text-lg">{hero.desc}</p>
+      <h1 className="mt-5 mb-4">{heroes.title}</h1>
+      <p className="text-lg">{heroes.desc}</p>
     </div>
   );
 }

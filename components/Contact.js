@@ -1,27 +1,27 @@
 import Image from 'next/image';
-import { contact } from '@/data/config';
+import { contact, contactes } from '@/data/config';
 
 export default function Stack() {
   return (
     <div>
       <div className="overflow-x-hidden w-full">
         <h2 className="landingSectionTitle max-w-max mx-0 text-left relative mb-4 md:w-max ">
-          {contact.title}
+          {contactes.title}
         </h2>
       </div>
-      <p>
-        Shoot me an email:{' '}
+      <p className='text-center'>
+      Envíame un correo electrónico:{' '}
         <a
           className="dark:text-white text-black transition-colors duration-500"
-          href={`mailto:${contact.email}`}
+          href={`mailto:${contactes.email}`}
         >
-          {contact.email}
+          {contactes.email}
         </a>
       </p>
-      <div className="flex space-x-5 mt-5 text-lightText transition-colors duration-500">
-        {contact.github && (
+      <div className="flex space-x-5 mt-5 text-lightText justify-center transition-colors duration-500">
+        {contactes.github && (
           <a
-            href={`https://github.com/${contact.github}`}
+            href={`https://github.com/${contactes.github}`}
             target="_blank"
             rel="noreferrer"
           >
@@ -33,9 +33,9 @@ export default function Stack() {
             />
           </a>
         )}
-        {contact.dribbble && (
+        {contactes.dribbble && (
           <a
-            href={`https://dribbble.com/${contact.dribbble}`}
+            href={`https://dribbble.com/${contactes.dribbble}`}
             target="_blank"
             rel="noreferrer"
           >
@@ -47,9 +47,9 @@ export default function Stack() {
             />
           </a>
         )}
-        {contact.linkedin && (
+        {contactes.linkedin && (
           <a
-            href={`https://linkedin.com/in/${contact.linkedin}`}
+            href={`https://linkedin.com/in/${contactes.linkedin}`}
             target="_blank"
             rel="noreferrer"
           >
